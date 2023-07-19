@@ -8,16 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    // UIPickerView 取資料 // UIPickerViewDataSource 協定： numberOfComponents, pickerView 實作
 
     let numberArray = ["1","2","3","4","5","6","7","8"]
     let fruitArray = ["apple", "banana", "mango", "watermelon"]
     
-    // 選單有幾個 column欄位 // how many component in picker view
+    // 選單有幾個 column 欄位 // how many component in picker view
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
     
-    // 選單欄位有幾個 option選項 // how many row in component
+    // 選單欄位有幾個 option 選項 // how many row in component
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         // 第0個欄位
         if component == 0 {
