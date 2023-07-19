@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     // UIPickerView 取資料 // UIPickerViewDataSource 協定： numberOfComponents, pickerView 實作
+    // UIPickerView 取資料 // UIPickerViewDelegate 協定： pickerView 實作
 
     let numberArray = ["1","2","3","4","5","6","7","8"]
     let fruitArray = ["apple", "banana", "mango", "watermelon"]
@@ -28,7 +29,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
     }
     
-    // 設定 option選項的內容
+    // 設定 option 選項的內容
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0 {
             return numberArray[row]
@@ -37,7 +38,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
     }
     
-    // 設定選單觸發事件
+    // 設定 選單觸發事件
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if component == 0 {
             print("number: \(numberArray[row])")
